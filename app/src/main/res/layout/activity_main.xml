@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Theme Switch Button -->
+    <ImageButton
+        android:id="@+id/themeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/switch_icon"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/button_background" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/android:colorBackground"
+        android:fillViewport="true"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Top Panel with Image and Title -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/topPanel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/main_image"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/movie_title"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:paddingBottom="20dp"
+                    android:paddingStart="15dp"
+                    android:fontFamily="serif-monospace"
+                    android:layout_gravity="bottom|start"
+                    tools:ignore="RtlSymmetry" />
+            </FrameLayout>
+
+            <!-- Description Section -->
+            <TextView
+                android:id="@+id/dec_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/desc_title"
+                android:textStyle="bold"
+                android:textColor="?attr/android:textColorPrimary"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="45dp" />
+
+            <TextView
+                android:id="@+id/dec_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie_description"
+                android:textColor="?attr/android:textColorPrimary"
+                android:textSize="17sp"
+                android:paddingHorizontal="10dp"
+                android:paddingTop="15dp"
+                android:layout_marginBottom="35dp" />
+
+            <!-- Image Album Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/images_title"
+                android:textColor="?attr/android:textColorPrimary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="10dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/image_album"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_1"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="bottom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/prev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back_arrow"
+                        android:background="@drawable/button_background"
+                        android:contentDescription="@string/previous_button_description" />
+
+                    <ImageButton
+                        android:id="@+id/next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/forward_arrow"
+                        android:background="@drawable/button_background"
+                        android:layout_marginStart="16dp"
+                        android:contentDescription="@string/next_button_description" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Order Tickets Section -->
+            <TextView
+                android:id="@+id/order_tickets_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_tickets_title"
+                android:textStyle="bold"
+                android:textColor="?attr/android:textColorPrimary"
+                android:textSize="20sp"
+                android:layout_marginTop="45dp"
+                android:layout_marginHorizontal="10dp" />
+
+            <!-- Theater Picker -->
+            <TextView
+                android:id="@+id/theaterPickerLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_theater_title"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="?attr/android:textColorPrimary"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerTheater"
+                android:padding="4dp"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="?attr/android:panelColorBackground"
+                android:layout_marginStart="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="60dp">
+
+                <!-- Date Picker -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSelectDate"
+                    style="@style/Widget.Material3.Button.IconButton.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:text="@string/select_date"
+                    app:icon="@drawable/date_icon"
+                    app:iconSize="20dp"
+                    app:iconGravity="start"
+                    app:iconTint="?attr/android:textColorPrimary"
+                    android:padding="10dp"
+                    android:textColor="?attr/android:textColorPrimary"
+                    app:cornerRadius="10dp"
+                    app:iconPadding="10dp"
+                    android:layout_marginTop="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textSelectedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/selected_date"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey"
+                    android:paddingHorizontal="8dp"
+                    android:layout_marginTop="4dp" />
+
+                <!-- Number of Tickets Picker -->
+                <TextView
+                    android:id="@+id/numTicketsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/number_of_tickets"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <NumberPicker
+                    android:id="@+id/numberPickerTickets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="25dp" />
+
+                <TextView
+                    android:id="@+id/textSelectedTickets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/num_of_tickets"
+                    android:textSize="12sp"
+                    android:textColor="@color/grey" />
+
+                <!-- Ticket Type Picker -->
+                <TextView
+                    android:id="@+id/ticketTypeLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ticket_type_title"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:textColor="?attr/android:textColorPrimary"
+                    android:layout_marginTop="35dp" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupTicketType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <RadioButton
+                        android:id="@+id/radioAdult"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adult_choice"
+                        android:textColor="?attr/android:textColorPrimary" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/adult_price"
+                        android:textColor="@color/grey" />
+
+                    <RadioButton
+                        android:id="@+id/radioChild"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/child_choice"
+
+                        android:textColor="?attr/android:textColorPrimary"
+                        android:layout_marginStart="16dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/child_price"
+                        android:textColor="@color/grey" />
+                </RadioGroup>
+
+
+                <!-- Submit Button -->
+                <Button
+                    android:id="@+id/buttonSubmitOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit_order_btn"
+                    android:backgroundTint="?attr/android:colorPrimary"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="24dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

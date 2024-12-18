@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/android:colorBackground"
+    android:paddingTop="20dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="10dp"
+    >
+
+    <!-- Exit Button -->
+    <ImageButton
+        android:id="@+id/exit_conf_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/exit"
+        android:src="@drawable/exit_icon"
+        android:background="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="20dp"
+        android:text="@string/order_confirmation_title"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Movie Name -->
+    <TextView
+        android:id="@+id/movie_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:text="@string/movie_name_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_title" />
+
+    <TextView
+        android:id="@+id/movie_name_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:paddingVertical="7dp"
+        android:text="@string/movie_title"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/movie_name"
+        app:layout_constraintTop_toBottomOf="@id/order_title" />
+
+    <!-- Ticket Count -->
+    <TextView
+        android:id="@+id/tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:paddingEnd="15dp"
+        android:text="@string/ticket_count_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_name"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/tickets_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        android:text="@string/ticket_count_val"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tickets"
+        app:layout_constraintTop_toBottomOf="@id/movie_name_val" />
+
+    <!-- Time -->
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:text="@string/time_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tickets" />
+
+    <TextView
+        android:id="@+id/time_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        android:text="@string/time_val"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tickets"
+        app:layout_constraintTop_toBottomOf="@id/tickets_val" />
+
+    <!-- Ticket Type -->
+    <TextView
+        android:id="@+id/tickets_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:text="@string/type_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time" />
+
+    <TextView
+        android:id="@+id/tickets_type_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        android:text="@string/type_val"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tickets"
+        app:layout_constraintTop_toBottomOf="@id/time_val" />
+
+    <!-- Theater -->
+    <TextView
+        android:id="@+id/theater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:text="@string/teather_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tickets_type" />
+
+    <TextView
+        android:id="@+id/theater_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        android:text="@string/theater_val"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/tickets"
+        app:layout_constraintTop_toBottomOf="@id/tickets_type_val" />
+
+    <!-- Order Total -->
+    <TextView
+        android:id="@+id/order_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="7dp"
+        android:text="@string/order_sum_text"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/theater" />
+
+    <TextView
+        android:id="@+id/order_sum_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="7dp"
+        android:text="@string/total_amount"
+        android:textColor="@color/green"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tickets"
+        app:layout_constraintTop_toBottomOf="@id/theater_val" />
+
+    <!-- Confirm Order Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirm_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/confirm_order_btn"
+        android:textColor="@color/white"
+        android:backgroundTint="?attr/android:colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_sum" />
+
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/space_man"
+        android:src="@drawable/spaceman"
+        android:alpha="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_sum" />
+
+    <!-- Konfetti Animation -->
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UI_Proj" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorSecondary">@color/secondary</item>
+
+        <!-- Background Colors -->
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="android:panelColorBackground">@color/background_light_sec</item>
+        <item name="android:textColorPrimary">@color/text_light</item>
+
+    </style>
+
+    <style name="Theme.UI_Proj" parent="Base.Theme.UI_Proj" />
+</resources>

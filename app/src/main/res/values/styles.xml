@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">80%p</item> <!-- Controls the width for larger screens -->
+        <item name="android:windowMinWidthMinor">80%p</item> <!-- Controls the width for smaller screens -->
+    </style>
+</resources>
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="bottom|center"
+    android:background="?attr/android:colorBackground"
+    android:paddingTop="100dp">
+
+    <!-- Dialog Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_dialog_title"
+        android:textColor="?attr/android:textColorPrimary"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <!-- Display Selected Date -->
+    <TextView
+        android:id="@+id/dialog_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18/12/2024"
+        android:textColor="@color/grey"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp" />
+
+    <!-- Number Picker for Time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="125dp"
+        android:layout_gravity="center">
+
+        <NumberPicker
+            android:id="@+id/numberPickerHour"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="2"
+            android:padding="0dp"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
+            android:selectionDividerHeight="0dp" />
+    </LinearLayout>
+
+    <!-- Spacing -->
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="12dp" />
+
+    <!-- Pick Time Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/pick_hour_btn"
+        style="@style/Widget.Material3.Button.IconButton.Outlined"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="@string/pick_btn"
+        android:padding="10dp"
+        android:textColor="?attr/android:textColorPrimary"
+        app:icon="@drawable/time_icon"
+        app:iconSize="17dp"
+        app:iconGravity="start"
+        app:iconPadding="6dp"
+        app:iconTint="?attr/android:textColorPrimary"
+        app:cornerRadius="10dp"
+        android:layout_gravity="center"
+        app:strokeColor="@color/smallText" />
+
+    <!-- Decorative Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="bottom"
+        android:alpha="0.2"
+        android:src="@drawable/popcorn_750" />
+
+</LinearLayout>
